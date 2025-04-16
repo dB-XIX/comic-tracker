@@ -13,7 +13,16 @@ const ComicSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true
-    }
+    },
+    ebayAverage: { type: Number },
+    ebaySales: [
+        {
+            price: Number,
+            date: Date,
+        }
+    ],
+    lastEbayUpdate: { type: Date },
+    wantList: { type: Boolean, default: false },
 });
 
 module.exports = mongoose.model('Comic', ComicSchema);

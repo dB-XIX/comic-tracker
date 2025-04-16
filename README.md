@@ -26,14 +26,14 @@ Built for serious collectors and professional portfolios alike.
 ## 🖼️ Preview
 
 ### 📋 Dashboard View (Add, Search, Filter, Sort)
-![Dashboard - Filters & Form](screenshots/dashboard1.png)
+![Dashboard - Filters & Form](screenshots/dashboard-form-filters.png)
 
 ### 🗂️ Collection View (Comic Cards)
-![Dashboard - Comic Cards](screenshots/dashboard2.png)
+![Dashboard - Comic Cards](screenshots/dashboard-cards.png)
 
 ### 📘 Comic Detail View (Price + Chart)
-![Comic Detail - Info & eBay](screenshots/comic-details1.png)  
-![Comic Detail - Sales Chart](screenshots/comic-details2.png)
+![Comic Detail - Info & eBay](screenshots/detail-view-top.png)  
+![Comic Detail - Sales Chart](screenshots/detail-view-chart.png)
 
 ---
 

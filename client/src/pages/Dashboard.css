@@ -1,12 +1,355 @@
-.thumbnail {
-    width: 70px;
-    height: auto;
-    border-radius: 4px;
+/* Dashboard.css - Chunk 1 */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+.dashboard {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+    .dashboard-header h2 {
+        color: #2b2d42;
+        font-size: 2rem;
+        margin: 0;
+    }
+
+.logout-btn {
+    background-color: #ef233c;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease-in-out;
+}
+
+    .logout-btn:hover {
+        background-color: #d90429;
+    }
+
+.form-section {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+    .form-section h3 {
+        margin-top: 0;
+        font-size: 1.25rem;
+        color: #2b2d42;
+    }
+
+.add-comic-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+    .add-comic-form input,
+    .add-comic-form button {
+        padding: 0.5rem;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 0.95rem;
+    }
+
+    .add-comic-form button {
+        background-color: #3a86ff;
+        color: white;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+        .add-comic-form button:hover {
+            background-color: #265dd8;
+        }
+
+/* SEARCH */
+.search-section {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+    .search-section input {
+        width: 100%;
+        max-width: 500px;
+        padding: 0.6rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+/* FILTERS & SORTING */
+.filters-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
+}
+
+    .filter-group label {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: #2b2d42;
+    }
+
+    .filter-group select {
+        padding: 0.5rem;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 0.95rem;
+        min-height: 2.5rem;
+    }
+
+/* EXPORT */
+.export-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+    .export-section button {
+        background-color: #00b894;
+        color: white;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .export-section button:hover {
+            background-color: #019874;
+        }
+
+/* TOTAL VALUE */
+.total-value {
+    color: #00b894;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+/* Comic list layout */
+.comic-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* When no comics are found */
+.no-results {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+}
+
+/* Grid layout for comics */
+.comic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+/* Each comic card */
+.comic-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Comic image thumbnail */
+.comic-thumbnail {
+    width: 180px;
+    height: 275px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
     transition: transform 0.2s ease;
 }
 
-    .thumbnail:hover {
+    .comic-thumbnail:hover {
         transform: scale(1.05);
     }
+/* Comic info section inside the card */
+.comic-info {
+    width: 100%;
+    text-align: left;
+}
+
+    .comic-info h4 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.1rem;
+        color: #1e1e1e;
+    }
+
+    .comic-info p {
+        margin: 0.25rem 0;
+        font-size: 0.95rem;
+        color: #444;
+        line-height: 1.4;
+    }
+
+/* eBay value display */
+.ebay-value {
+    margin-top: 0.5rem;
+    color: #0b802b;
+    font-weight: bold;
+}
+
+/* Comic card action buttons */
+.comic-actions {
+    margin-top: 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+    .comic-actions button {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.85rem;
+        border: none;
+        border-radius: 4px;
+        background: #555;
+        color: #fff;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+
+        .comic-actions button:hover {
+            background: #333;
+        }
+
+.delete-btn {
+    background-color: #d9534f;
+}
+
+    .delete-btn:hover {
+        background-color: #c9302c;
+    }
+/* Edit comic form styles */
+.edit-form input {
+    width: 100%;
+    margin: 0.25rem 0;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.edit-buttons {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+    .edit-buttons button {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.9rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.2s ease;
+    }
+
+        .edit-buttons button:first-child {
+            background-color: #0275d8;
+            color: white;
+        }
+
+            .edit-buttons button:first-child:hover {
+                background-color: #025aa5;
+            }
+
+        .edit-buttons button:last-child {
+            background-color: #999;
+            color: white;
+        }
+
+            .edit-buttons button:last-child:hover {
+                background-color: #777;
+            }
+
+/* Image modal for enlarged comic images */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .image-modal img {
+        max-width: 95%;
+        max-height: 95%;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+    margin-bottom: 1.5rem;
+}
+
+.nav-links a {
+    margin-right: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.navbar button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+}
+
