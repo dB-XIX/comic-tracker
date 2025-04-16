@@ -1,8 +1,7 @@
 # 📚 Comic Book Tracker
 
-A full-stack MERN application to track your comic book collection — complete with titles, issues, publishers, grades, notes, and cover images.  
-Now enhanced with eBay sales data integration, professional UI, and trend tracking prep.  
-Built for collectors who want a fast, modern, and smart way to manage their library.
+A full-stack MERN application to manage your comic book collection with searchable filters, eBay sales data, editable entries, and a polished responsive UI.  
+Built for serious collectors and professional portfolios alike.
 
 ---
 
@@ -10,63 +9,65 @@ Built for collectors who want a fast, modern, and smart way to manage their libr
 
 - ✏️ Add, edit, and delete comics  
 - 🖼️ Upload cover image URLs with clickable thumbnails  
-- 🔍 Click thumbnail to view enlarged image  
-- 🔐 Token-based authentication (JWT)  
-- 🔒 Protected dashboard (only accessible when logged in)  
-- 🧠 Auto-detects slabbed/raw status from notes and grade  
-- 📈 eBay average sales price per comic (updates once per day)  
-- 📊 Sales trend chart (on comic details page)  
-- 🔗 eBay search link (perfect for want list items)  
-- 📱 Responsive layout with polished UI  
-- 🛠️ Built with the MERN stack (MongoDB, Express, React, Node.js)
+- 🔍 Click thumbnails to enlarge images in a modal  
+- 🧠 Auto-detects slabbed/raw status from grade and notes  
+- 🔐 JWT-based authentication with protected routes  
+- 🎨 Toggle between Light and Dark modes  
+- 📊 View eBay average sales price for each comic  
+- 📈 Sales trend chart on individual comic detail pages  
+- 🔗 Quick link to search for the comic on eBay  
+- 🧰 Filter by title, publisher, and slabbed/raw format  
+- 🔎 Keyword search (live filter)  
+- 📤 Export collection as JSON or CSV  
+- 📱 Responsive layout for mobile, tablet, and desktop  
 
 ---
 
 ## 🖼️ Preview
 
-**Dashboard View:**
-- Card-style layout with title, issue, and grade info  
-- Image thumbnails with hover effects  
-- Average eBay sale price displayed to the right  
+### 📋 Dashboard View (Add, Search, Filter, Sort)
+![Dashboard - Filters & Form](screenshots/dashboard1.png)
 
-**Comic Detail View:**
-- Larger image  
-- Price trend chart  
-- eBay link for quick browsing
+### 🗂️ Collection View (Comic Cards)
+![Dashboard - Comic Cards](screenshots/dashboard2.png)
+
+### 📘 Comic Detail View (Price + Chart)
+![Comic Detail - Info & eBay](screenshots/comic-details1.png)  
+![Comic Detail - Sales Chart](screenshots/comic-details2.png)
 
 ---
 
 ## 🛠️ Tech Stack
 
 - **Frontend:** React (Vite), React Router  
-- **Backend:** Express.js  
-- **Database:** MongoDB (Mongoose)  
-- **Auth:** JSON Web Tokens (JWT)  
-- **Styling:** Vanilla CSS + JSX  
-- **External API:** eBay Browse API
+- **Backend:** Express.js (Node.js)  
+- **Database:** MongoDB (via Mongoose)  
+- **Authentication:** JSON Web Tokens (JWT)  
+- **Styling:** Vanilla CSS + custom layout  
+- **External API:** eBay Browse API (OAuth2)  
+- **Charting:** Chart.js via react-chartjs-2  
 
 ---
 
 ## 🧪 Local Setup
 
 ### Prerequisites
-- Node.js and npm  
-- MongoDB (local or Atlas)  
-- Git
 
-### Clone & Install
+- Node.js & npm  
+- MongoDB (Atlas or local)  
+- GitHub account  
+- eBay Developer credentials (for API access)  
+
+### Clone the repo
 
 ```bash
 git clone https://github.com/dB-XIX/comic-tracker.git
 cd comic-tracker
 ```
 
-Install dependencies:
+### Install dependencies
 
 ```bash
-# Root
-npm install
-
 # Frontend
 cd client
 npm install
@@ -76,53 +77,64 @@ cd ../server
 npm install
 ```
 
-Create a `.env` file in `/server` with:
+### Configure environment
+
+In `/server`, create a `.env` file with:
 
 ```env
-MONGO_URI=your_mongo_db_connection_string
+MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_super_secret_key
 EBAY_CLIENT_ID=your_ebay_api_client_id
 EBAY_CLIENT_SECRET=your_ebay_api_secret
 ```
 
-### Run the app
+---
+
+## ▶️ Run the App
+
+### In two terminals:
 
 ```bash
-# Terminal 1 - backend
+# Terminal 1 (Backend)
 cd server
 npm run dev
+```
 
-# Terminal 2 - frontend
+```bash
+# Terminal 2 (Frontend)
 cd client
 npm run dev
 ```
+
+App will be live at:  
+[http://localhost:5173](http://localhost:5173)
 
 ---
 
 ## 🔐 Authentication
 
-JWT tokens are stored in localStorage and verified on every protected route.  
-Token expiration is enforced, and invalid tokens are cleared automatically.
+- JWT tokens stored in localStorage  
+- Token is decoded and validated on protected routes  
+- Expired/invalid tokens are auto-cleared  
 
 ---
 
-## 🧠 Roadmap
+## 🧭 Roadmap
 
-- 🧾 Full comic history chart (expand beyond 90-day eBay limit)
-- 💾 Store eBay data per comic in DB to track long-term trends
-- 🔝 Top 10 most valuable comics section
-- 📝 Comic “Want List” view with search and valuation
-- 📦 Upload real image files instead of URLs
-- 🧭 Filter by publisher, year, grade, slabbed/raw
+- 💬 Add comment section for each comic  
+- 🧾 Full eBay sales history logging  
+- 🔝 Top 10 most valuable comics view  
+- ✅ "Mark as acquired" toggle for Want List items  
+- 📂 Upload real images instead of image URLs  
+- 🧠 AI-grade estimation from image and description  
 
 ---
 
-## 🧑‍💻 Author
+## 👤 Author
 
 **Michael**  
 GitHub: [dB-XIX](https://github.com/dB-XIX)  
-Working on this as part of a professional software engineering portfolio.  
-Reach out if you’re a fellow dev or recruiter!
+Full-stack software engineer building practical, real-world apps for portfolios and hireability.
 
 ---
 
