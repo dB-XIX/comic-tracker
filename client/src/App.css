@@ -1,4 +1,3 @@
-/* Make the whole navbar line up properly */
 .main-header {
     background-color: #f5f5f5;
     padding: 0.5rem 2rem;
@@ -39,3 +38,160 @@
     display: flex;
     gap: 0.75rem;
 }
+
+body.dark-theme {
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+}
+
+    body.dark-theme input,
+    body.dark-theme select,
+    body.dark-theme textarea {
+        background-color: #2b2b2b;
+        color: #f5f5f5;
+        border: 1px solid #555;
+    }
+
+    body.dark-theme .main-header {
+        background-color: #2c2c2c;
+        border-bottom: 1px solid #444;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+
+    body.dark-theme .site-title {
+        color: #f5f5f5;
+    }
+
+    body.dark-theme .nav-links a {
+        color: #ccc;
+    }
+
+        body.dark-theme .nav-links a:hover {
+            color: #4da3ff;
+        }
+
+    body.dark-theme .theme-toggle {
+        background-color: #333;
+        color: #fff;
+        border: 1px solid #555;
+    }
+
+    body.dark-theme .auth-box,
+    body.dark-theme .navbar,
+    body.dark-theme .comic-info,
+    body.dark-theme .comic-card {
+        background-color: #2c2c2c;
+        color: #fff;
+    }
+
+    body.dark-theme .edit-form input,
+    body.dark-theme .add-comic-form input {
+        background-color: #333;
+        color: #f5f5f5;
+        border: 1px solid #666;
+    }
+
+    body.dark-theme .edit-buttons button,
+    body.dark-theme .auth-btn {
+        background-color: #444;
+        color: #fff;
+        border: 1px solid #666;
+    }
+
+        body.dark-theme .edit-buttons button:hover,
+        body.dark-theme .auth-btn:hover {
+            background-color: #555;
+        }
+
+    body.dark-theme .form-section,
+    body.dark-theme .search-section,
+    body.dark-theme .filters-section,
+    body.dark-theme .export-section,
+    body.dark-theme .add-comic-form,
+    body.dark-theme .comic-list,
+    body.dark-theme .comic-thumbnail,
+    body.dark-theme .comic-card,
+    body.dark-theme .total-value,
+    body.dark-theme .comic-info {
+        background-color: #1f1f1f;
+        color: #f5f5f5;
+    }
+
+    body.dark-theme .filter-group select,
+    body.dark-theme .filter-group label {
+        background-color: #2b2b2b;
+        color: #f5f5f5;
+        border: 1px solid #555;
+    }
+
+    body.dark-theme .comic-thumbnail {
+        border: 1px solid #444;
+    }
+
+    body.dark-theme .edit-buttons button,
+    body.dark-theme button,
+    body.dark-theme .add-comic-form button {
+        background-color: #444;
+        color: #fff;
+        border: 1px solid #666;
+    }
+
+        body.dark-theme .edit-buttons button:hover,
+        body.dark-theme button:hover {
+            background-color: #555;
+        }
+
+    /* Brighten section headers and key labels */
+    body.dark-theme h2,
+    body.dark-theme h3,
+    body.dark-theme h4,
+    body.dark-theme .comic-info h4,
+    body.dark-theme .comic-details-title,
+    body.dark-theme .ebay-value,
+    body.dark-theme .section-title,
+    body.dark-theme .total-value,
+    body.dark-theme .comic-card p,
+    body.dark-theme .comic-info p {
+        color: #ffffff;
+    }
+
+    /* Specific for eBay trend section and chart labels */
+    body.dark-theme .comic-details-label,
+    body.dark-theme .chart-title,
+    body.dark-theme canvas,
+    body.dark-theme .chart-label {
+        color: #f5f5f5 !important;
+    }
+
+    /* Header for Add a Comic */
+    body.dark-theme .form-section h3 {
+        color: #ffffff;
+    }
+
+    body.dark-theme .comic-details {
+        background-color: #1f1f1f;
+        color: #f5f5f5;
+    }
+
+        body.dark-theme .comic-details p,
+        body.dark-theme .comic-details h2,
+        body.dark-theme .comic-details h3,
+        body.dark-theme .comic-details .comic-details-meta {
+            color: #f5f5f5;
+        }
+
+        body.dark-theme .comic-details a {
+            color: #4da3ff;
+        }
+
+            body.dark-theme .comic-details a:hover {
+                color: #73c2ff;
+            }
+    
+    body.dark-theme .comic-details {
+        color: #f5f5f5;
+    }
+
+        body.dark-theme .comic-details strong {
+            color: #ffffff;
+        }

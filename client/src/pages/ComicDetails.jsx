@@ -111,17 +111,14 @@ function ComicDetails() {
                         🔎 Search this comic on eBay →
                     </a>
                 </div>
-
-                <div style={{ flex: 1 }}>
-                    <h2 style={{ marginBottom: '0.5rem' }}>
-                        {comic.title} #{comic.issue}
-                    </h2>
+                <div className="comic-details">
+                    <h2>{comic.title} #{comic.issue}</h2>
                     <p><strong>Series:</strong> {comic.seriesTitle}</p>
                     <p><strong>Publisher:</strong> {comic.publisher}</p>
                     <p><strong>Year:</strong> {comic.year}</p>
                     <p><strong>Grade:</strong> {comic.grade}</p>
                     <p><strong>Notes:</strong> {comic.notes}</p>
-                </div>
+                </div>              
             </div>
 
             <div style={{ marginTop: '2rem' }}>

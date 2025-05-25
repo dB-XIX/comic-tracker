@@ -96,12 +96,6 @@ function Dashboard() {
             .replace('Dc Comics', 'DC')
             .replace('Detective Comics', 'DC');
 
-    // Logout handler
-    const handleLogout = () => {
-        localStorage.removeItem('token');
-        window.location.href = '/login';
-    };
-
     // Delete handler
     const handleDelete = async (id) => {
         const confirmed = window.confirm('Are you sure you want to delete this comic?');
@@ -285,20 +279,6 @@ function Dashboard() {
 
     return (
         <div className="dashboard">
-            <nav className="navbar">
-                <div className="nav-actions">
-                    <button
-                        className="theme-toggle"
-                        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                    >
-                        {theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode'}
-                    </button>
-                    <button className="logout-btn" onClick={handleLogout}>
-                        Logout
-                    </button>
-                </div>
-            </nav>
-
             <section className="form-section">
                 <h3>Add a Comic</h3>
                 <form

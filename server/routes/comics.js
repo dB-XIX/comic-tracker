@@ -2,11 +2,14 @@ const router = require('express').Router();
 const Comic = require('../models/Comic');
 const verifyToken = require('../middleware/verifyToken');
 const fetchEbaySalesMock = require('../utils/fetchEbaySalesMock');
-
+const { Types } = require('mongoose');
 
 // GET all comics for logged-in user
 router.get('/', verifyToken, async (req, res) => {
-    const comics = await Comic.find({ userId: req.userId }).sort({ createdAt: -1 });
+    const comics = await Comic.find({
+        userId: new Types.ObjectId(req.userId)
+    }).sort({ createdAt: -1 });
+
     res.json(comics);
 });
 
